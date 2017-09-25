@@ -1,3 +1,20 @@
 page-hello-ionic {
+color: aliceblue;
+    font-size: 20px;
+    
+}
+$control-height: 50px;
 
+
+.header {
+  height: $control-height;
+    background-color: orange;
+}
+.backGround{
+    color:aliceblue;
+    background: green;
+}
+#input{
+    
+    color: black;
 }

@@ -3,12 +3,15 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Hello Ionic</ion-title>
+      
+    <ion-title >Fitness First MCK</ion-title>
   </ion-navbar>
+     
+    
 </ion-header>
 
 
-<ion-content padding>
+<ion-content  class = "backGround" padding>
 
   <h3>Welcome to your first Ionic app!</h3>
 
@@ -20,6 +23,12 @@
   </p>
   <p>
     <button ion-button color="primary" menuToggle>Toggle Menu</button>
+          <button ion-button color="secondary" menuToggle (click)="newList()" accesskey="">List page</button>
+
+    <button ion-button color="secondary" outline (click)="newLoad(msgToSend)">Info Now</button>  
   </p>
+    
+<input type= "text" [(ngModel)]="msgToSend"  #ctl="ngModel" id="input" >
+    <p> The message is : {{msgToSend }}</p>
 
 </ion-content>

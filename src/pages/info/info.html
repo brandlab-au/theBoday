@@ -1,0 +1,53 @@
+<!--
+  Generated template for the InfoPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-header>
+    
+
+  <ion-navbar>
+    <ion-title>Info</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<h3>Welcome my Info page!</h3>
+
+  <h2> This was message sent : {{incommingMessage}}</h2>
+<ion-grid >
+  <ion-row >
+    <ion-col col-12 > The heading {{test.name}}</ion-col>
+  </ion-row>
+    
+<ion-list>
+    <button ion-item *ngFor="let dish of dishes" (click)="itemTapped($event, dish)">
+      <ion-icon name="logo-twitter" item-left></ion-icon>
+      {{dish.price |currency}}
+      <div class="item-note" item-right>
+        {{dish.description}}
+      </div>
+    </button>
+</ion-list>    
+  <ion-row>
+    <ion-col col-6>This column will take 6 columns</ion-col>
+  </ion-row>
+    <ion-row>
+    <ion-col col-12 col-sm-9 col-md-6 col-lg-4 col-xl-3>
+      This column will be 12 columns wide by default,
+      9 columns at the small breakpoint,
+      6 at the medium breakpoint, 4 at large, and 3 at xl.
+    </ion-col>
+  </ion-row>
+    
+</ion-grid>
+  <p>
+    <button ion-button color="primary" menuToggle>Toggle Menu</button>
+    <button ion-button color="secondary" outline>Secondary Outline</button>  
+  </p>
+</ion-content>
+    
