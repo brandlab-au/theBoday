@@ -20,26 +20,42 @@
 
   <h2> Hi: {{incommingMessage}}</h2>
 <ion-grid >
-  <ion-row >
+  <ion-row padding >
     <ion-col col-12 > The heading {{test.name}}</ion-col>
-  </ion-row>
+      <ion-img style="width: 150px; height: 150px;" src="http://static.goal.com/4323400/4323432_news.jpg" ></ion-img>
+  </ion-row >
     
 <ion-list>
     <button ion-item *ngFor="let dish of dishes" (click)="itemTapped($event, dish)">
       <ion-icon name="logo-twitter" item-left></ion-icon>
-      {{dish.price |currency}}
+     {{dish.price}}
+        <!--<ion-img  ng-src="{{dish.image}}"
+          alt="{{ dish.name }} Photo"></ion-img>
+        -->
+       <!--  <ion-img style="width: 20px; height: 20px;" src="{{dish.image}}"></ion-img>
+        -->
       <div class="item-note" item-right>
+          <ion-img style="width: 150px; height: 150px;"  
+                   src="{{dish.image}}"></ion-img>
+<!--
         {{dish.description}}
+-->
       </div>
     </button>
 </ion-list>    
   <ion-row>
-    <ion-col col-2>Height</ion-col>
-    <ion-col col-2>Weight</ion-col>
-       <ion-col col-2>Chest</ion-col>
-       <ion-col col-2>leg</ion-col>
-       <ion-col col-2>Calf</ion-col>
-       <ion-col col-2>bicip</ion-col>
+    <ion-col col-3>Height</ion-col>
+    <ion-col col-3>Weight</ion-col>
+       <ion-col col-3>Chest</ion-col>
+       <ion-col col-3>leg</ion-col>
+      
+  </ion-row>
+    <ion-row>
+    <ion-col col-3>speed</ion-col>
+    <ion-col col-3>stamener</ion-col>
+       <ion-col col-3>reps</ion-col>
+       <ion-col col-3>leg</ion-col>
+      
   </ion-row>
     
 </ion-grid>

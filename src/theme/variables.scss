@@ -46,13 +46,13 @@ $colors: (
 );
 
 // this is a top bar change 
-$toolbar-md-background:color($colors,dark);
-$toolbar-ios-background: color($colors,dark);
-$toolbar-wp-background: color($colors,dark);
+$toolbar-md-background:color($colors,primary);
+$toolbar-ios-background: color($colors,primary);
+$toolbar-wp-background: color($colors,primary);
 //$menu-md-background	:color($colors,dark);
-$list-wp-background-color:color($colors,dark);
-$list-md-background-color:color($colors,dark);
-$list-ios-background-color:color($colors,dark);
+$list-wp-background-color:color($colors,primary);
+$list-md-background-color:color($colors,primary);
+$list-ios-background-color:color($colors,primary);
 
 
 // App iOS Variables
