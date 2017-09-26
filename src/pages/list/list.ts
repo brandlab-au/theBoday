@@ -30,7 +30,7 @@ export class ListPage {
     for(let i = 1; i < 11; i++) {
       this.items.push({
         title: this.sport[i]+' '+ i,
-        note: 'See more' + i,
+        note: 'More' + i,
         icon: this.icons[Math.floor(Math.random() * this.icons.length)],
         color: this.color[i]
       });
