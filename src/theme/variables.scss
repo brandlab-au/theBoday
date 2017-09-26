@@ -45,6 +45,11 @@ $colors: (
   )
 );
 
+// this is a top bar change 
+$toolbar-md-background:color($colors,dark);
+//$menu-md-background	:color($colors,dark);
+$list-wp-background-color:color($colors,dark);
+$list-md-background-color:color($colors,dark);
 
 // App iOS Variables
 // --------------------------------------------------

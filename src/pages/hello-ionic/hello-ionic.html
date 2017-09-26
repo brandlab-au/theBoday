@@ -11,24 +11,25 @@
 </ion-header>
 
 
-<ion-content  class = "backGround" padding>
+<ion-content padding>
 
-  <h3>Welcome to your first Ionic app!</h3>
+  <h3>Body symmetry</h3>
 
   <p>
-    This starter project is our way of helping you get a functional app running in record time.
+    One of the most important thing about training is keeping your body shape in line with it's needs, there is no point in big arms and small legs or great cardio and no strength.
   </p>
   <p>
-    Follow along on the tutorial section of the Ionic docs!
+    Follow along on the tutorial section to see how best to use this
+      app!
   </p>
   <p>
-    <button ion-button color="primary" menuToggle>Toggle Menu</button>
-          <button ion-button color="secondary" menuToggle (click)="newList()" accesskey="">List page</button>
+    <button ion-button color="primary" menuToggle>Menu</button>
+          <button ion-button color="secondary" menuToggle (click)="newList()" accesskey="">Activites</button>
 
-    <button ion-button color="secondary" outline (click)="newLoad(msgToSend)">Info Now</button>  
+    <button ion-button color="secondary" outline (click)="newLoad(msgToSend)">Info</button>  
   </p>
-    
+    <p> Name : {{msgToSend }}</p>
 <input type= "text" [(ngModel)]="msgToSend"  #ctl="ngModel" id="input" >
-    <p> The message is : {{msgToSend }}</p>
+    
 
 </ion-content>
