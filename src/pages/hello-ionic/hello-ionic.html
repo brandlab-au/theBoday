@@ -26,10 +26,28 @@
     <button ion-button color="primary" menuToggle>Menu</button>
           <button ion-button color="secondary" menuToggle (click)="newList()" accesskey="">Activites</button>
 
-    <button ion-button color="secondary" outline (click)="newLoad(msgToSend)">Info</button>  
+    <button ion-button color="danger"  (click)="newLoad(msgToSend)">Info</button>  
   </p>
     <p> Name : {{msgToSend }}</p>
 <input type= "text" [(ngModel)]="msgToSend"  #ctl="ngModel" id="input" >
+  
+    <ion-list padding>
+<ion-item>
+<ion-label><p style="font-size: 20px">Heigth</p></ion-label>
+<ion-select [(ngModel)]="toppings" multiple="false" cancelText="Nah" okText="Okay!">
+  <ion-option value="bacon" selected="true">1.50 /1.53 cm</ion-option>
+  <ion-option value="olives">1.53 /1.56 cm</ion-option>
+  <ion-option value="xcheese" selected="true">1.53 /1.56 cm</ion-option>
+  <ion-option value="peppers">1.53 /1.56 cm</ion-option>
+  <ion-option value="mushrooms">1.53 /1.56 cm</ion-option>
+  <ion-option value="onions">1.53 /1.56 cm</ion-option>
+  <ion-option value="pepperoni">1.53 /1.56 cm</ion-option>
+  <ion-option value="pineapple">1.53 /1.56 cm</ion-option>
+  <ion-option value="sausage">1.53 /1.56 cm</ion-option>
+  <ion-option value="Spinach">1.53 /1.56 cm</ion-option>
+</ion-select>
+</ion-item>
+</ion-list>
     
 
 </ion-content>
