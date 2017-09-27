@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { ListPage } from '../list/list';
 import { InfoPage } from '../info/info';
+import { ClientPage } from '../client/client';
+
 
 
 @Component({

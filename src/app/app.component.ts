@@ -1,14 +1,12 @@
 import { Component, ViewChild } from '@angular/core';
-
 import { Platform, MenuController, Nav } from 'ionic-angular';
-
 import { HelloIonicPage } from '../pages/hello-ionic/hello-ionic';
 import { ListPage } from '../pages/list/list';
 import { InfoPage } from '../pages/info/info';
+import { ClientPage } from '../pages/client/client';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-
 
 @Component({
   templateUrl: 'app.html'
@@ -31,8 +29,10 @@ export class MyApp {
     // set our app's pages
     this.pages = [
       { title: 'Home', component: HelloIonicPage },
-      { title: 'Sprots', component: ListPage },
-        { title: 'My Info', component: InfoPage }
+      { title: 'Sports', component: ListPage },
+      { title: 'Info', component: InfoPage },
+      { title: 'Your Details', component: ClientPage }
+
     ];
   }
 
