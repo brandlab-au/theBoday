@@ -21,7 +21,11 @@ export class HelloIonicPage {
     
 newLoad(user){
     this.events.publish('user:created', user, Date.now());
-    this.navCtrl.push(InfoPage);
+     let data ={
+        "userName" : user,
+        "age" : 30
+    };
+    this.navCtrl.push(InfoPage,data);
     console.log('User created!'+this.user); 
 }  
     

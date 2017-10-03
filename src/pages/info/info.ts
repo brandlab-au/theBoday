@@ -19,7 +19,7 @@ import { HelloIonicPage } from '../hello-ionic/hello-ionic';
 export class InfoPage {
    
      userName:String;
-    
+     userAge:String;
     test=
                          {
                            name:'Schwarzenegger',
@@ -87,6 +87,9 @@ export class InfoPage {
   this.incommingMessage = navParams.get('name' );
 */
        
+        this.userName = this.navParams.get("userName");
+    this.userAge = this.navParams.get("age");
+
      events.subscribe('user:created', (user, time) => {
     // user and time are the same arguments passed in `events.publish(user, time)`
     console.log('Welcome', user, 'at', time);
