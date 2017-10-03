@@ -2,5 +2,7 @@
   "name": "theBod",
   "app_id": "411389f9",
   "type": "ionic-angular",
-  "integrations": {}
+  "integrations": {
+    "cordova": {}
+  }
 }

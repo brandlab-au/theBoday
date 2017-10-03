@@ -11,58 +11,174 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content padding >
 
-  <h3>Body symmetry</h3>
+  <h2>Have a go right now !</h2>
 
-  <p>
-    One of the most important thing about training is keeping your body shape in line with it's needs, there is no point in big arms and small legs or great cardio and no strength.
-  </p>
-  <p>
-    Follow along on the tutorial section to see how best to use this
-      app!
-  </p>
-  <p>
-    <button ion-button color="primary" menuToggle>Menu</button>
-          <button ion-button color="secondary" menuToggle (click)="newList()" accesskey="">Activites</button>
-
-    <button ion-button color="danger"  (click)="newLoad(msgToSend)">Info</button>  
-  </p>
-    <p> Name : {{msgToSend }}</p>
-<input type= "text" [(ngModel)]="msgToSend"  #ctl="ngModel" id="input" >
-  
-   <div padding>
-  <ion-segment [(ngModel)]="pet">
-    <ion-segment-button value="kittens">
-      Kittens
+  <h3>
+    Pick your body type!
+  </h3>
+<!--
+This is where client picks the type of body they have
+-->
+    
+<div padding >
+  <ion-segment [(ngModel)]="now">
+    <ion-segment-button value="Women" id = "black">
+      Women
     </ion-segment-button>
-    <ion-segment-button value="puppies">
-      Puppies
+    <ion-segment-button value="Men"  id = "black">
+      Men
     </ion-segment-button>
   </ion-segment>
 </div>
 
-<div [ngSwitch]="pet">
-  <ion-list *ngSwitchCase="'puppies'">
+<div [ngSwitch]="now">
+  <ion-list *ngSwitchCase="'Men'" >
     <ion-item>
       <ion-thumbnail item-start>
-        <img src="img/thumbnail-puppy-1.jpg">
+        <img src="../../assets/img/2.jpg">
       </ion-thumbnail>
-      <h2>Ruby</h2>
+      <h2>below weight 20% population</h2>
     </ion-item>
-    ...
+      <ion-item>
+      <ion-thumbnail item-start>
+        <img src="../../assets/img/2.jpg">
+      </ion-thumbnail>
+      <h2>average 25% population</h2>
+    </ion-item>
+      <ion-item>
+      <ion-thumbnail item-start>
+        <img src="../../assets/img/2.jpg">
+      </ion-thumbnail>
+      <h2>above normal 50$ population</h2>
+    </ion-item>
+      <ion-item>
+      <ion-thumbnail item-start>
+        <img src="../../assets/img/2.jpg">
+      </ion-thumbnail>
+      <h2>obesity 15% population</h2>
+    </ion-item>
   </ion-list>
 
-  <ion-list *ngSwitchCase="'kittens'">
-    <ion-item>
+  <ion-list *ngSwitchCase="'Women'">
+     <ion-item>
       <ion-thumbnail item-start>
-        <img src="img/thumbnail-kitten-1.jpg">
+        <img src="../../assets/img/1.jpg">
       </ion-thumbnail>
-      <h2>Luna</h2>
+      <h2>below weight 20% population</h2>
     </ion-item>
-    ...
+      <ion-item>
+      <ion-thumbnail item-start>
+        <img src="../../assets/img/1.jpg">
+      </ion-thumbnail>
+      <h2>average 25% population</h2>
+    </ion-item>
+      <ion-item>
+      <ion-thumbnail item-start>
+        <img src="../../assets/img/1.jpg">
+      </ion-thumbnail>
+      <h2>above normal 50$ population</h2>
+    </ion-item>
+      <ion-item>
+      <ion-thumbnail item-start>
+        <img src="../../assets/img/1.jpg">
+      </ion-thumbnail>
+      <h2>obesity 15% population</h2>
+    </ion-item>
   </ion-list>
 </div>
+  
+       <p> Give us your Name : {{user}}</p>
+<input type= "text" [(ngModel)]="user"  #ctl id="black" >
+<p>
+    <button ion-button color="primary" menuToggle>Menu</button>
+    <button ion-button color="secondary" menuToggle (click)="newList()" accesskey="">Activites</button>
+<button ion-button color="danger"  (click)="newLoad(user)">Info</button>  
+</p>
+ 
+  
     
+<!--
+This will be where you pick your ideal body shape    
+-->
+<h3>
+    Pick where you see your self !
+  </h3>    
+   <div padding>
+  <ion-segment [(ngModel)]="future">
+    <ion-segment-button value="Women"  id = "black">
+      Women
+    </ion-segment-button>
+    <ion-segment-button value="Men"  id = "black">
+      Men
+    </ion-segment-button>
+  </ion-segment>
+</div>
+
+<div [ngSwitch]="future">
+  <ion-list *ngSwitchCase="'Men'">
+    <ion-item>
+      <ion-thumbnail item-start>
+        <img src="../../assets/img/2.jpg">
+      </ion-thumbnail>
+      <h2>below weight 20% population</h2>
+    </ion-item>
+      <ion-item>
+      <ion-thumbnail item-start>
+        <img src="../../assets/img/2.jpg">
+      </ion-thumbnail>
+      <h2>average 25% population</h2>
+    </ion-item>
+      <ion-item>
+      <ion-thumbnail item-start>
+        <img src="../../assets/img/2.jpg">
+      </ion-thumbnail>
+      <h2>above normal 50$ population</h2>
+    </ion-item>
+      <ion-item>
+      <ion-thumbnail item-start>
+        <img src="../../assets/img/2.jpg">
+      </ion-thumbnail>
+      <h2>obesity 15% population</h2>
+    </ion-item>
+  </ion-list>
+
+  <ion-list *ngSwitchCase="'Women'">
+    <ion-item>
+      <ion-thumbnail item-start>
+        <img src="../../assets/img/1.jpg">
+      </ion-thumbnail>
+      <h2>below weight 20% population</h2>
+    </ion-item>
+      <ion-item>
+      <ion-thumbnail item-start>
+        <img src="../../assets/img/1.jpg">
+      </ion-thumbnail>
+      <h2>average 25% population</h2>
+    </ion-item>
+      <ion-item>
+      <ion-thumbnail item-start>
+        <img src="../../assets/img/1.jpg">
+      </ion-thumbnail>
+      <h2>above normal 50$ population</h2>
+    </ion-item>
+      <ion-item>
+      <ion-thumbnail item-start>
+        <img src="../../assets/img/1.jpg">
+      </ion-thumbnail>
+      <h2>obesity 15% population</h2>
+    </ion-item>
+  </ion-list>
+</div>
+
+<p>
+    <button ion-button color="primary" menuToggle>Menu</button>
+          <button ion-button color="secondary" menuToggle (click)="newList()" accesskey="">Activites</button>
+
+    <button ion-button color="danger"  (click)="newLoad(msgToSend)">Info</button>  
+</p>
+    <p> Give us your age : {{msgToSend }}</p>
+<input type= "text" [(ngModel)]="age"  #ctl="ngModel" id="black" >
 
 </ion-content>

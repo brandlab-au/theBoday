@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, Events } from 'ionic-angular';
+import { HelloIonicPage } from '../hello-ionic/hello-ionic';
 
 //import { ItemDetailsPage } from '../item-details/item-details';
 /**
@@ -14,9 +15,11 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   selector: 'page-info',
   templateUrl: 'info.html',
 })
+
 export class InfoPage {
    
-     
+     userName:String;
+    
     test=
                          {
                            name:'Schwarzenegger',
@@ -75,16 +78,26 @@ export class InfoPage {
                            comment: ''
                         }
                         ]
-  incommingMessage;
+  /*incommingMessage;*/
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  this.incommingMessage = navParams.get('TextMessage' );
+
+    
+  constructor(public navCtrl: NavController, public navParams: NavParams,public events: Events) {
+/*
+  this.incommingMessage = navParams.get('name' );
+*/
+       
+     events.subscribe('user:created', (user, time) => {
+    // user and time are the same arguments passed in `events.publish(user, time)`
+    console.log('Welcome', user, 'at', time);
+  });
+     
       
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad InfoPage');
-    
+    console.log('User created!'+this.userName);
       
   }
     
